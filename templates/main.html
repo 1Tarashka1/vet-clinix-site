@@ -1,53 +1,144 @@
 {% extends 'base.html' %}
 
 {% block title %}
-main
+Главная - VetCare
 {% endblock %}
 
 {% block content %}
 <div class="main-page">
     <div class="container py-5">
-      <!-- Герой-баннер -->
-      <div class="hero-banner text-center mb-5 p-5 bg-light rounded-3">
-        <h1 class="display-4">Добро пожаловать в VetCare</h1>
-        <p class="lead">Профессиональная забота о ваших питомцах</p>
-      </div>
-  
-      <!-- Карточки -->
-      <div class="row g-4">
-        <!-- Карточка "О нас" -->
-        <div class="col-md-4">
-          <div class="main-card card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h2 class="card-title">О нашей клинике</h2>
-              <p class="card-text">Мы работаем с 2010 года, предоставляя полный спектр ветеринарных услуг. Наша миссия - здоровье и комфорт ваших питомцев.</p>
-              <a href="{{ url_for('about') }}" class="btn btn-primary">Подробнее</a>
-            </div>
-          </div>
+        <!-- Герой-баннер -->
+        <div class="hero-banner text-center mb-5 p-5 bg-light rounded-3">
+            <h1 class="display-4">Добро пожаловать в VetCare</h1>
+            <p class="lead">Профессиональная забота о ваших питомцах</p>
         </div>
-  
-        <!-- Карточка "Услуги" -->
-        <div class="col-md-4">
-          <div class="main-card card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h2 class="card-title">Наши услуги</h2>
-              <p class="card-text">От консультаций до сложных операций - мы предлагаем профессиональные услуги для животных всех пород и возрастов.</p>
-              <a href="{{ url_for('services') }}" class="btn btn-primary">Все услуги</a>
+
+        <!-- Карточки -->
+        <div class="row g-4 mb-5">
+            <!-- Карточка "О нас" -->
+            <div class="col-md-4">
+                <div class="main-card card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">О нашей клинике</h2>
+                        <p class="card-text">Мы работаем с 2010 года, предоставляя полный спектр ветеринарных услуг. Наша миссия - здоровье и комфорт ваших питомцев.</p>
+                        <a href="{{ url_for('about') }}" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-  
-        <!-- Карточка "Доктора" -->
-        <div class="col-md-4">
-          <div class="main-card card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h2 class="card-title">Наши специалисты</h2>
-              <p class="card-text">В нашей команде опытные ветеринары с профильным образованием и стажем работы от 5 лет.</p>
-              <a href="{{ url_for('doctors') }}" class="btn btn-primary">Знакомство с командой</a>
+
+            <!-- Карточка "Услуги" -->
+            <div class="col-md-4">
+                <div class="main-card card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Наши услуги</h2>
+                        <p class="card-text">От консультаций до сложных операций - мы предлагаем профессиональные услуги для животных всех пород и возрастов.</p>
+                        <a href="{{ url_for('services') }}" class="btn btn-primary">Все услуги</a>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Карточка "Доктора" -->
+            <div class="col-md-4">
+                <div class="main-card card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Наши специалисты</h2>
+                        <p class="card-text">В нашей команде опытные ветеринары с профильным образованием и стажем работы от 5 лет.</p>
+                        <a href="{{ url_for('doctors') }}" class="btn btn-primary">Знакомство с командой</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Новый раздел "Наши пациенты" -->
+        <div class="patients-section mb-5">
+            <h2 class="text-center mb-4">Наши пациенты</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Питомец 1 -->
+                <div class="col">
+                    <div class="patient-card text-center">
+                        <img src="{{ url_for('static', filename='img/patients/cat1.jpg') }}" 
+                             class="patient-img rounded-circle mb-2"
+                             alt="Кот Барсик">
+                        <h5>Барсик</h5>
+                        <p class="text-muted">Персидский кот</p>
+                    </div>
+                </div>
+                
+                <!-- Питомец 2 -->
+                <div class="col">
+                    <div class="patient-card text-center">
+                        <img src="{{ url_for('static', filename='img/patients/dog1.jpg') }}" 
+                             class="patient-img rounded-circle mb-2"
+                             alt="Собака Рекс">
+                        <h5>Рекс</h5>
+                        <p class="text-muted">Немецкая овчарка</p>
+                    </div>
+                </div>
+                
+                <!-- Питомец 3 -->
+                <div class="col">
+                    <div class="patient-card text-center">
+                        <img src="{{ url_for('static', filename='img/patients/rabbit1.jpg') }}" 
+                             class="patient-img rounded-circle mb-2"
+                             alt="Кролик Пушистик">
+                        <h5>Пушистик</h5>
+                        <p class="text-muted">Карликовый кролик</p>
+                    </div>
+                </div>
+                
+                <!-- Питомец 4 -->
+                <div class="col">
+                    <div class="patient-card text-center">
+                        <img src="{{ url_for('static', filename='img/patients/cat2.jpg') }}" 
+                             class="patient-img rounded-circle mb-2"
+                             alt="Кот Сэм">
+                        <h5>Сэм</h5>
+                        <p class="text-muted">Британский кот</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+        <!-- Раздел "Акции и скидки" -->
+        <div class="discounts-section mb-5">
+            <h2 class="text-center mb-4">Акции и специальные предложения</h2>
+            <div class="row g-4">
+                <!-- Акция 1 -->
+                <div class="col-md-4">
+                    <div class="discount-card card h-100 border-0 shadow-sm">
+                        <div class="discount-badge">-20%</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Чек-ап для кошек</h3>
+                            <p class="card-text">Полное обследование вашего питомца со скидкой 20% до конца месяца.</p>
+                            <div class="discount-date">До 30 июня 2024</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Акция 2 -->
+                <div class="col-md-4">
+                    <div class="discount-card card h-100 border-0 shadow-sm">
+                        <div class="discount-badge">-15%</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Вакцинация</h3>
+                            <p class="card-text">Комплексная вакцинация для щенков и котят со скидкой 15% при первом посещении.</p>
+                            <div class="discount-date">Постоянная акция</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Акция 3 -->
+                <div class="col-md-4">
+                    <div class="discount-card card h-100 border-0 shadow-sm">
+                        <div class="discount-badge">-50%</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Стерилизация</h3>
+                            <p class="card-text">Специальная цена на стерилизацию кошек и собак в летний период.</p>
+                            <div class="discount-date">До 31 августа 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock %}

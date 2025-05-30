@@ -65,16 +65,92 @@ body {
     padding: 20px;
 }
 
-/*FOOTER*/
 
-footer {
-    background: #9EFFEA;
-    margin-top: auto;
+/* Стили для нового футера */
+.footer {
+    background-color: #9EFFEA;
+    color: #424d57;
+}
+
+.footer-title {
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #0d6efd;
+}
+
+.footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
 }
 
 .footer__img {
-    height: 48px;
-    width: 48px;
+    height: 50px;
+    width: auto;
+}
+
+.social-links a {
+    color: #424d57;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0d6efd;
+}
+
+.nav.flex-column .nav-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.nav.flex-column .bi {
+    margin-top: 0.2rem;
+}
+
+.newsletter-form .form-control {
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 20px 20px 0;
+}
+
+.payment-methods .bi {
+    color: #424d57;
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+    .footer .col-md-6 {
+        text-align: center !important;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* Каталог услуг */
@@ -291,4 +367,85 @@ footer {
 .profile-info h2 {
   color: #0d6efd;
   font-weight: 600;
+}
+
+/* Стили для раздела "Наши пациенты" */
+.patients-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+.patient-card {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.patient-card:hover {
+    transform: translateY(-5px);
+}
+
+.patient-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #0d6efd;
+    padding: 3px;
+}
+
+/* Стили для раздела скидок */
+.discounts-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.discount-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+    border: 1px solid #e9ecef;
+}
+
+.discount-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff6b6b;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.discount-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.discount-card .card-title {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+    padding-right: 40px; /* Чтобы текст не заходил под бейдж */
+}
+
+.discount-card .card-text {
+    color: #495057;
+    min-height: 60px;
 }
