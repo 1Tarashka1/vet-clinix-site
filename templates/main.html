@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+main
+{% endblock %}
+
+{% block content %}
+<div class="main-page">
+    <div class="container py-5">
+      <!-- Герой-баннер -->
+      <div class="hero-banner text-center mb-5 p-5 bg-light rounded-3">
+        <h1 class="display-4">Добро пожаловать в VetCare</h1>
+        <p class="lead">Профессиональная забота о ваших питомцах</p>
+      </div>
+  
+      <!-- Карточки -->
+      <div class="row g-4">
+        <!-- Карточка "О нас" -->
+        <div class="col-md-4">
+          <div class="main-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">О нашей клинике</h2>
+              <p class="card-text">Мы работаем с 2010 года, предоставляя полный спектр ветеринарных услуг. Наша миссия - здоровье и комфорт ваших питомцев.</p>
+              <a href="{{ url_for('about') }}" class="btn btn-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Карточка "Услуги" -->
+        <div class="col-md-4">
+          <div class="main-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Наши услуги</h2>
+              <p class="card-text">От консультаций до сложных операций - мы предлагаем профессиональные услуги для животных всех пород и возрастов.</p>
+              <a href="{{ url_for('services') }}" class="btn btn-primary">Все услуги</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Карточка "Доктора" -->
+        <div class="col-md-4">
+          <div class="main-card card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Наши специалисты</h2>
+              <p class="card-text">В нашей команде опытные ветеринары с профильным образованием и стажем работы от 5 лет.</p>
+              <a href="{{ url_for('doctors') }}" class="btn btn-primary">Знакомство с командой</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

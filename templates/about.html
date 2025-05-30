@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock %}
+
+{% block content %}
+<section class="about-section py-5">
+    <div class="container">
+      <!-- Заголовок с акцентом -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">О нашей клинике</h1>
+        <div class="divider mx-auto bg-primary"></div>
+      </div>
+  
+      <!-- Блок с миссией -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Наша миссия</h2>
+          <p class="lead">Обеспечивать профессиональную и compassionate ветеринарную помощь с 2010 года.</p>
+          <p>Мы сочетаем передовые медицинские технологии с индивидуальным подходом к каждому питомцу.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="{{ url_for('static', filename='img/clinic-interior.jpg') }}" 
+               alt="Интерьер клиники" 
+               class="img-fluid rounded shadow">
+        </div>
+      </div>
+  
+      <!-- Преимущества в иконках -->
+      <div class="features-box bg-light p-4 rounded-3 mb-5">
+        <h3 class="text-center mb-4">Почему выбирают нас</h3>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <div class="feature-icon bg-primary rounded-circle mx-auto mb-3">
+              <i class="bi bi-heart-pulse fs-1 text-white"></i>
+            </div>
+            <h5>Опытные врачи</h5>
+            <p>Специалисты с 10+ летним стажем</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="feature-icon bg-primary rounded-circle mx-auto mb-3">
+              <i class="bi bi-shield-check fs-1 text-white"></i>
+            </div>
+            <h5>Безопасность</h5>
+            <p>Стерильные помещения и оборудование</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="feature-icon bg-primary rounded-circle mx-auto mb-3">
+              <i class="bi bi-emoji-heart-eyes fs-1 text-white"></i>
+            </div>
+            <h5>Забота</h5>
+            <p>Индивидуальный подход к каждому животному</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- История клиники -->
+      <div class="timeline">
+        <h3 class="text-center mb-4">Наша история</h3>
+        <div class="timeline-item">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <h5>Основание клиники</h5>
+            <p>Открытие первого кабинета с двумя ветеринарами</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content">
+            <h5>Новое здание</h5>
+            <p>Переезд в современный трехэтажный комплекс</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <h5>Современное оборудование</h5>
+            <p>Установка МРТ и цифрового рентгена</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
